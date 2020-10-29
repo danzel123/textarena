@@ -1,0 +1,267 @@
+.textarena-container {
+  position: relative;
+  border: none;
+}
+.textarena-container:hover, .textarena-container:active, .textarena-container:focus {
+  border: none;
+}
+
+.textarena-creator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.2rem;
+  user-select: none;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+}
+.textarena-creator_active {
+  z-index: 1;
+}
+.textarena-creator__create-button {
+  margin-left: -2.2rem;
+  margin-right: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  min-width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid #888;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+  background: none;
+  box-sizing: border-box;
+}
+.textarena-creator__create-button svg {
+  width: 100%;
+  fill: #888;
+}
+.textarena-creator__create-button:hover, .textarena-creator__create-button:focus, .textarena-creator__create-button:active {
+  outline: none;
+  border: 1px solid #000;
+}
+.textarena-creator__create-button:hover svg, .textarena-creator__create-button:focus svg, .textarena-creator__create-button:active svg {
+  fill: #000;
+}
+.textarena-creator_active .textarena-creator__create-button {
+  transform: rotate(135deg);
+}
+.textarena-creator__placeholder {
+  visibility: visible;
+  opacity: 0.2;
+  user-select: none;
+  pointer-events: none;
+  transition: 0.3s;
+  width: 0;
+  white-space: nowrap;
+}
+.textarena-creator_active .textarena-creator__placeholder {
+  opacity: 0;
+}
+.textarena-creator__list {
+  display: flex;
+  flex-wrap: wrap;
+  transition: 0.3s;
+  opacity: 0;
+}
+.textarena-creator_active .textarena-creator__list {
+  flex-direction: row;
+  opacity: 1;
+}
+.textarena-creator__item {
+  display: flex;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid #888;
+  color: #888;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  background: none;
+  margin-right: -1.8rem;
+  box-sizing: border-box;
+}
+.textarena-creator__item:hover, .textarena-creator__item:focus, .textarena-creator__item:active {
+  outline: none;
+  border: 1px solid #000;
+  color: #000;
+}
+.textarena-creator__item:hover svg, .textarena-creator__item:focus svg, .textarena-creator__item:active svg {
+  fill: #000;
+}
+.textarena-creator_active .textarena-creator__item {
+  margin-right: 0.5rem;
+}
+
+.textarena-editor {
+  position: relative;
+  border: none;
+  padding: 0.1rem 0;
+}
+.textarena-editor:hover, .textarena-editor:active, .textarena-editor:focus {
+  border: none;
+  outline: none;
+}
+
+.textarena-toolbar {
+  position: absolute;
+}
+.textarena-toolbar__pointer {
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: #333;
+  z-index: -1;
+}
+.textarena-toolbar_bottom {
+  transform: translate(0, 15px);
+}
+.textarena-toolbar_bottom .textarena-toolbar__pointer {
+  top: -7px;
+}
+.textarena-toolbar_top {
+  transform: translate(0, -15px);
+}
+.textarena-toolbar_top .textarena-toolbar__pointer {
+  bottom: -7px;
+}
+.textarena-toolbar__list {
+  display: flex;
+  flex-wrap: wrap;
+  color: #ccc;
+  box-shadow: 0 8px 23px -6px rgba(21, 40, 54, 0.31), 22px -14px 34px -18px rgba(33, 48, 73, 0.26);
+  border-radius: 4px;
+  background-color: #333;
+  z-index: 2;
+  user-select: none;
+}
+.textarena-toolbar__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 900;
+  font-family: monospace;
+  cursor: pointer;
+  margin: 4px 4px 4px 0;
+}
+.textarena-toolbar__item:first-child {
+  margin-left: 4px;
+}
+.textarena-toolbar__item_active {
+  color: #fff;
+  box-shadow: inset -1px -1px 0 0 rgba(255, 255, 255, 0.4);
+  background: #1a1a1a;
+}
+.textarena-toolbar__control-key {
+  position: absolute;
+  left: 50%;
+  top: -17%;
+  display: none;
+  width: 16px;
+  height: 16px;
+  background-color: #333;
+  text-align: center;
+  line-height: 16px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+.textarena-toolbar__alt-key {
+  position: absolute;
+  left: 50%;
+  top: -17%;
+  display: none;
+  width: 16px;
+  height: 16px;
+  background-color: #333;
+  text-align: center;
+  line-height: 16px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+.textarena-toolbar_show-control-key .textarena-toolbar__control-key {
+  display: block;
+}
+.textarena-toolbar_show-alt-key .textarena-toolbar__alt-key {
+  display: block;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+h6 {
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2em;
+  margin: 1em 0 0.5em;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.2em;
+  margin: 0 0 1em;
+}
+
+ul,
+ol {
+  font-size: 1rem;
+  line-height: 1.2em;
+  padding-left: 1rem;
+}
+
+li {
+  margin: 0 0 1em;
+}
