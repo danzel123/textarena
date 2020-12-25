@@ -108,6 +108,13 @@
   border: none;
   outline: none;
 }
+.textarena-editor figure {
+  overflow: auto;
+  resize: both;
+}
+.textarena-editor figure img {
+  max-width: 100%;
+}
 
 .textarena-toolbar {
   position: absolute;
