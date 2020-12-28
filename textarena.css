@@ -111,6 +111,7 @@
 .textarena-editor figure {
   overflow: auto;
   resize: both;
+  border: 1px solid black;
 }
 .textarena-editor figure img {
   max-width: 100%;
