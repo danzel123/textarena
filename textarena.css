@@ -130,6 +130,7 @@
 }
 .textarena-creator__item {
   display: flex;
+  position: relative;
   width: 1.8rem;
   height: 1.8rem;
   border: 1px solid #888;
@@ -153,6 +154,26 @@
 }
 .textarena-creator_active .textarena-creator__item {
   margin-right: 0.5rem;
+}
+.textarena-creator__control-key, .textarena-creator__alt-key {
+  position: absolute;
+  left: 50%;
+  top: -17%;
+  display: none;
+  width: 16px;
+  height: 16px;
+  background-color: #333;
+  text-align: center;
+  line-height: 16px;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+.textarena-creator_show-control-key .textarena-creator__control-key {
+  display: block;
+}
+.textarena-creator_show-alt-key .textarena-creator__alt-key {
+  display: block;
 }
 
 .textarena-editor {
@@ -229,21 +250,7 @@
   box-shadow: inset -1px -1px 0 0 rgba(255, 255, 255, 0.4);
   background: #1a1a1a;
 }
-.textarena-toolbar__control-key {
-  position: absolute;
-  left: 50%;
-  top: -17%;
-  display: none;
-  width: 16px;
-  height: 16px;
-  background-color: #333;
-  text-align: center;
-  line-height: 16px;
-  color: #fff;
-  border-radius: 5px;
-  border: 1px solid #999;
-}
-.textarena-toolbar__alt-key {
+.textarena-toolbar__control-key, .textarena-toolbar__alt-key {
   position: absolute;
   left: 50%;
   top: -17%;
