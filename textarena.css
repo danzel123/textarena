@@ -5,6 +5,62 @@
 .textarena-container:hover, .textarena-container:active, .textarena-container:focus {
   border: none;
 }
+.textarena-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.textarena-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.textarena-container h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.textarena-container h4 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.textarena-container h5 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.textarena-container h6 {
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.textarena-container h1,
+.textarena-container h2,
+.textarena-container h3,
+.textarena-container h4,
+.textarena-container h5,
+.textarena-container h6 {
+  line-height: 1.2em;
+  margin: 1em 0 0.5em;
+}
+.textarena-container h1:first-child,
+.textarena-container h2:first-child,
+.textarena-container h3:first-child,
+.textarena-container h4:first-child,
+.textarena-container h5:first-child,
+.textarena-container h6:first-child {
+  margin-top: 0;
+}
+.textarena-container p {
+  font-size: 1rem;
+  line-height: 1.2em;
+  margin: 0 0 1em;
+}
+.textarena-container ul,
+.textarena-container ol {
+  font-size: 1rem;
+  line-height: 1.2em;
+  padding-left: 1rem;
+}
+.textarena-container li {
+  margin: 0 0 1em;
+}
 
 .textarena-creator {
   position: absolute;
@@ -206,70 +262,4 @@
 }
 .textarena-toolbar_show-alt-key .textarena-toolbar__alt-key {
   display: block;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-h4 {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-h5 {
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-h6 {
-  font-style: italic;
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.2em;
-  margin: 1em 0 0.5em;
-}
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-  margin-top: 0;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.2em;
-  margin: 0 0 1em;
-}
-
-ul,
-ol {
-  font-size: 1rem;
-  line-height: 1.2em;
-  padding-left: 1rem;
-}
-
-li {
-  margin: 0 0 1em;
 }
