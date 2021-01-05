@@ -1,6 +1,7 @@
 .textarena-container {
   position: relative;
   border: none;
+  line-height: 1.6em;
 }
 .textarena-container:hover, .textarena-container:active, .textarena-container:focus {
   border: none;
@@ -49,13 +50,11 @@
 }
 .textarena-container p {
   font-size: 1rem;
-  line-height: 1.2em;
   margin: 0 0 1em;
 }
 .textarena-container ul,
 .textarena-container ol {
   font-size: 1rem;
-  line-height: 1.2em;
   padding-left: 1rem;
 }
 .textarena-container li {
@@ -180,6 +179,7 @@
   position: relative;
   border: none;
   padding: 0.1rem 0;
+  font-size: 1rem;
 }
 .textarena-editor:hover, .textarena-editor:active, .textarena-editor:focus {
   border: none;
